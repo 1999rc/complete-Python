@@ -9,7 +9,7 @@ Default_end_time=180
 Search_duration=5
 Tript_duration=20
 Departure_interval=5 
-
+#Taxi simulation entry point
 Event=collections.namedtuple('Event','time proc action')
 
 def taxi_process(ident,trips,start_time=0):
@@ -82,4 +82,4 @@ if __name__=='__main__':
                         help='random generator seed (for testing)')
     args=parser.parse_args()
     main(args.end_time,args.taxis,args.seed)
-    
+
